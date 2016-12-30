@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    
+    <style>
+        .container {width: 600px; margin:auto;}
+        h2 {cursor: pointer; margin: 0;}
+        p {display: none;}
+        
+        img {width: 200px;}
+        
+    </style>
+    
+    <script>
+//    $(document).ready (function () {
+//        $("h1").toggle(1200);
+//        $("button").click (function () {
+//            $("p").toggle (1000);
+//    });
+//        });
+        
+    $(document).ready (function() {
+        $("p").hide();
+//        $("h2").click (function () {
+        $("h2").hover (function () {
+//        $("h2").on(onmouseout);
+            $("p").slideToggle(1000);
+//            $(this).next().slideToggle();
+            $(this).next().stop().slideToggle();
+        });
+    });
+    </script>
+    <script src = "dist/js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="dist/css/lightbox.css">
+    
+</head>
+<body>
+   
+    <a href="homer.jpg" data-lightbox="simpsons">
+        <img src="homer.jpg" alt="">
+    
+       </a>    <a href="Marge.jpg" data-lightbox="simpsons">
+        <img src="Marge.jpg" alt="">
+    
+       </a>    <a href="Bart.png" data-lightbox="simpsons">
+        <img src="Bart.png" alt="">
+    </a>
+    
+    <h1 id="title">Title</h1>
+    <button>Hide</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis facilis, magni maxime. Dolorem voluptas minus explicabo obcaecati in architecto nobis praesentium eum id, autem pariatur, cumque esse aperiam possimus ut?</p>
+    <script>
+//        $("#title").hide();
+    </script>
+    
+    <div class="container">
+        <h2>Toggle</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro debitis dolor culpa? Delectus eum illum unde, labore sunt commodi repellat sapiente, in dignissimos earum quaerat ea laborum impedit, deserunt omnis!</p>        
+        
+        <h2>Toggle</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro debitis dolor culpa? Delectus eum illum unde, labore sunt commodi repellat sapiente, in dignissimos earum quaerat ea laborum impedit, deserunt omnis!</p>        
+        
+        <h2>Toggle</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro debitis dolor culpa? Delectus eum illum unde, labore sunt commodi repellat sapiente, in dignissimos earum quaerat ea laborum impedit, deserunt omnis!</p>
+    
+    </div>
+    
+    <div class="container"></div>
+</body>
+</html>
